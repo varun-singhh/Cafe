@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cafepages.views import index,Dashboard,signup
+from cafepages.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',index,name='index'),
     path('dashboard/',Dashboard,name='dashboard'),
     path('signup/',signup,name='signup'),
+    path('login/',login,name='login'),
+    path('view/',view,name='view'),
+    path('logout/',logoutuser,name='logout'),
+    path('update/',update,name='update'),
 ]

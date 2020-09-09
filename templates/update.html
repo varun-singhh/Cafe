@@ -84,26 +84,24 @@
                   <form method="post" class="form-box">
                     {%csrf_token%}
                     <h3 class="h4 text-black mb-4">Sign Up</h3>
+                    {{form.username}}
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username" name="username" required>
+                      <input type="text" class="form-control" placeholder="Phone Number" name="phone" required>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                      <input type="text" class="form-control" placeholder="College" name="College" required>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Last Nname" name="last_name" required>
+                      <input type="text" class="form-control" placeholder="Hostel" name="hostel" required>
                     </div>
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email Addresss" name="email" required>
+                      <input type="text" class="form-control" placeholder="Year" name="year" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" name="password1" required>
-                    </div>
-                    <div class="form-group mb-4">
-                      <input type="password" class="form-control" placeholder="Re-type Password" name="password2" required>
+                      <input type="text" class="form-control" placeholder="Roll Number" name="roll" required>
                     </div>
                     <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up" >
                       {{form.errors}}
                     </div>
                   </form>
