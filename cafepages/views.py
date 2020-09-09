@@ -49,14 +49,35 @@ def login(request):
 @login_required(login_url='/login')
 def update(request):
 	form=UserdetailModel()
+	# print(form)
 	if request.method=="POST":
-		obj=get_object_or_404(Userdetail)
-		form=UserdetailModel(request.POST,instance=obj)
-		if form.is_valid():
-			a=form.save()
-			a.username=request.user
-			a.save()
-			return redirect('dashboard')
+
+			user=request.user
+			# print(user,user.id)
+			try:
+				obj=Userdetail.objects.get(username=user)
+			except:
+				obj=None
+			print(obj)
+			if obj is not None:
+				form=UserdetailModel(request.POST,instance=obj)
+				if form.is_valid():
+					#UserdetailModel.objects.get(pk=user).exists()
+					#if form.username exist():
+						a=form.save()
+						a.username=request.user
+						a.save()
+						return redirect('dashboard')
+			else:
+				form=UserdetailModel(request.POST)
+				if form.is_valid():
+					form.save()
+					return redirect('dashboard')
+
+
+				# else:
+				# 	form.save()
+				# 	return redirect('dashboard')
 	val = Userdetail.objects.all()
 	context={'form':form,'val':val}
 	return render(request,'update.html',context)
