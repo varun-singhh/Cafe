@@ -25,4 +25,5 @@ urlpatterns = [
     path('view/',view,name='view'),
     path('logout/',logoutuser,name='logout'),
     path('update/',update,name='update'),
+    path('password-change/', password_change, name='password_change'),
 ]

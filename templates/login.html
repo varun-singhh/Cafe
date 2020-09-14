@@ -45,6 +45,7 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
+          <br><br><br><br>
           <div class="site-logo mr-auto w-25"><a href="{%url 'index'%}">OneSchool</a></div>
 
          
@@ -52,8 +53,8 @@
           <div class="ml-auto w-25">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
-                <li class="cta"><a href="{%url 'index'%}" class="nav-link"><span>Home</span></a></li>
-              </ul>
+                <!-- <li class="cta"><a href="{%url 'index'%}" class="nav-link"><span>Home</span></a></li>
+               --></ul>
             </nav>
             <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
           </div>
@@ -72,7 +73,7 @@
                 <div class="col-lg-6 mb-4">
                   <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
                   {%for message in messages%}
-                  <h1  data-aos="fade-up" data-aos-delay="100" style="color: red;">{{message}}</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" style="color: #7971ea;">{{message}}</h1>
                   {%endfor%}
                   <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Not Yet Registered? Register here</p>
                   <p data-aos="fade-up" data-aos-delay="300"><a href="{%url 'signup'%}" class="btn btn-primary py-3 px-5 btn-pill">Register</a></p>

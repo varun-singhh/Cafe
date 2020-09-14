@@ -12,4 +12,8 @@ class UserdetailModel(forms.ModelForm):
 	class Meta:
 		model=Userdetail
 		fields='__all__'
+class contactModelform(forms.ModelForm):
+	class Meta:
+		model=contactform
+		fields='__all__'
 

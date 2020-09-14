@@ -994,15 +994,15 @@ h1, h2, h3, h4, h5,
 
 .courses-title {
   padding-bottom: 13rem;
-  background: #7971ea; }
+  background: #fff; }
   .courses-title .section-title {
-    color: #fff; }
+    color: #7971ea; }
 
 .courses-entry-wrap {
-  margin-top: -282px; }
+  margin-top: -382px; }
   @media (max-width: 1199.98px) {
     .courses-entry-wrap {
-      margin-top: -246px; } }
+      margin-top: -382px; } }
 
 .nonloop-block-14 .owl-stage {
   padding-top: 5rem;
